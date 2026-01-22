@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/FLuentPattern/FLuentPattern.csproj" />
+  </Folder>
+  <Folder Name="/src/UnitOfWork/">
+    <Project Path="src/UnitOfWork/UnitOfWork.App/UnitOfWork.App.csproj" />
+    <Project Path="src/UnitOfWork/UnitOfWork.Core/UnitOfWork.Core.csproj" />
+    <Project Path="src/UnitOfWork/UnitOfWork.Tests/UnitOfWork.Tests.csproj" />
+  </Folder>
+</Solution>
