@@ -1,10 +1,8 @@
-public class Order
-{
-    public int Number { get; init; }
-    public DateTime CreatedAt { get; init; }
-    public required Address ShippingAddress { get; set; }
-}
+namespace FluentPattern.Models;
 
+/// <summary>
+/// Représente une adresse postale complète.
+/// </summary>
 public class Address
 {
     public required string Street { get; init; }
