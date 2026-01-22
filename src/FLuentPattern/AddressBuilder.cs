@@ -1,45 +1,44 @@
-namespace FleuntPattern;
-
-public class Address
-{
-    public required string Street { get; set; }
-    public required string PostalCode { get; set; }
-    public required string Country { get; set; }
-}
-
 public class AddressBuilder
 {
     private string _street;
+    private string _city;
     private string _postalCode;
     private string _country;
 
-    public AddressBuilder SetStreet(string? street)
+    private AddressBuilder() { }
+
+    public static AddressBuilder Empty() => new();
+
+    public AddressBuilder SetStreet(string street)
     {
-        ArgumentNullException.ThrowIfNullOrWhiteSpace(nameof(street));
         _street = street;
         return this;
     }
 
-    public AddressBuilder SetPostalCode(string? postalCode)
+    public AddressBuilder SetCity(string city)
     {
-        ArgumentNullException.ThrowIfNullOrWhiteSpace(nameof(postalCode));
+        _city = city;
+        return this;
+    }
+
+    public AddressBuilder SetPostalCode(string postalCode)
+    {
         _postalCode = postalCode;
         return this;
     }
 
     public AddressBuilder SetCountry(string country)
     {
-        ArgumentNullException.ThrowIfNullOrWhiteSpace(nameof(country));
         _country = country;
         return this;
     }
 
     public Address Build()
     {
-        // Implementation here
         return new Address
         {
             Street = _street,
+            City = _city,
             PostalCode = _postalCode,
             Country = _country
         };
