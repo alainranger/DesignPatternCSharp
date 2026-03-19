@@ -1,6 +1,7 @@
 <Solution>
   <Folder Name="/src/">
     <Project Path="src/FLuentPattern/FLuentPattern.csproj" />
+    <Project Path="src/StrategyPattern/StrategyPattern.csproj" />
   </Folder>
   <Folder Name="/src/UnitOfWork/">
     <Project Path="src/UnitOfWork/UnitOfWork.App/UnitOfWork.App.csproj" />
