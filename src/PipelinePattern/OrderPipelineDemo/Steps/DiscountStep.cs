@@ -13,6 +13,7 @@ public class DiscountStep : IStep
             order.TotalPrice -= 10;
             order.AppliedDiscounts.Add("PROMO10");
         }
+
         return Task.FromResult(order);
     }
 }

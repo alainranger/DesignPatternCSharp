@@ -10,6 +10,7 @@ public class OrderPipeline
     public OrderPipeline AddStep(IStep step)
     {
         _steps.Add(step);
+
         return this;
     }
 
@@ -17,9 +18,12 @@ public class OrderPipeline
     {
         foreach (var step in _steps)
         {
-            if (!order.IsValid) break; // Arrêt si une étape invalide la commande
+            if (!order.IsValid)
+                break; // Arrêt si une étape invalide la commande
+
             order = await step.ExecuteAsync(order);
         }
+
         return order;
     }
 }
