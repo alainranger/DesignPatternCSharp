@@ -3,6 +3,9 @@
     <Project Path="src/FLuentPattern/FLuentPattern.csproj" />
     <Project Path="src/StrategyPattern/StrategyPattern.csproj" />
   </Folder>
+  <Folder Name="/src/PipelinePattern/">
+    <Project Path="src/PipelinePattern/OrderPipelineDemo/OrderPipelineDemo.csproj" />
+  </Folder>
   <Folder Name="/src/UnitOfWork/">
     <Project Path="src/UnitOfWork/UnitOfWork.App/UnitOfWork.App.csproj" />
     <Project Path="src/UnitOfWork/UnitOfWork.Core/UnitOfWork.Core.csproj" />
