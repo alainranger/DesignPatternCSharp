@@ -8,8 +8,7 @@ public class ValidationStep : IStep
     public Task<Order> ExecuteAsync(Order order)
     {
         Console.WriteLine("-> Validation de la commande...");
-        if (order.BasePrice <= 0)
-            order.IsValid = false;
+        order.IsValid = order.BasePrice > 0;
 
         return Task.FromResult(order);
     }
