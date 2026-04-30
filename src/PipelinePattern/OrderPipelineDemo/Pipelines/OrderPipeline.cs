@@ -21,10 +21,10 @@ public class OrderPipeline
         ArgumentNullException.ThrowIfNull(order);
         foreach (var step in _steps)
         {
+            order = await step.ExecuteAsync(order);
+
             if (!order.IsValid)
                 break; // Arrêt si une étape invalide la commande
-
-            order = await step.ExecuteAsync(order);
         }
 
         return order;
