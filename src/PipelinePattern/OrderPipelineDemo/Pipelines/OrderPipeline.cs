@@ -18,6 +18,7 @@ public class OrderPipeline
 
     public async Task<Order> ProcessAsync(Order order)
     {
+        ArgumentNullException.ThrowIfNull(order);
         foreach (var step in _steps)
         {
             if (!order.IsValid)
