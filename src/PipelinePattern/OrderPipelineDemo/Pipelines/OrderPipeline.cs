@@ -9,6 +9,8 @@ public class OrderPipeline
 
     public OrderPipeline AddStep(IStep step)
     {
+        ArgumentNullException.ThrowIfNull(step);
+            
         _steps.Add(step);
 
         return this;
