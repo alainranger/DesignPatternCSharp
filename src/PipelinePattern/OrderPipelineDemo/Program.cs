@@ -11,7 +11,7 @@ var pipeline = new OrderPipeline()
 
 var processedOrder = await pipeline.ProcessAsync(order);
 
-Console.WriteLine($"---");
+Console.WriteLine("---");
 Console.WriteLine($"Résultat final pour la commande {processedOrder.Id}:");
 Console.WriteLine($"Prix Total: {processedOrder.TotalPrice:C2}");
 Console.WriteLine($"Rabais: {string.Join(", ", processedOrder.AppliedDiscounts)}");
