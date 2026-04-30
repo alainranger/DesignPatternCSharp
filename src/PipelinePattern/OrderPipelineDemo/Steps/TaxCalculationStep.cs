@@ -11,7 +11,9 @@ public class TaxCalculationStep : IStep
     public Task<Order> ExecuteAsync(Order order)
     {
         Console.WriteLine("-> Calcul des taxes...");
-        decimal taxRate = order.CountryCode == "CA" ? CanadaTaxRate : DefaultTaxRate;
+        decimal taxRate = string.Equals(order.CountryCode, "CA", System.StringComparison.OrdinalIgnoreCase)
+            ? CanadaTaxRate
+            : DefaultTaxRate;
         decimal taxAmount = order.BasePrice * taxRate;
         order.TotalPrice = order.BasePrice + taxAmount;
 
